@@ -3,9 +3,11 @@
 ## 1.1 code structure:
     
 1.1.1 kernel: contains implementation of kernel code.  
-1.1.2 user: contains all user level apps, e.g. cat, echo, ls, the shell etc.[note: on a real linux os, "ls" and "vscode" are both user level apps, although one is easy the other one is complex]
+1.1.2 user: contains all user level apps, e.g. cat, echo, ls, the shell etc.[note: on a real linux os, "ls" and "vscode" are both user level apps, although one is easy the other one is complex]  
+
 ## 1.2 app working flow:
-1.2.1 you enter a string into shell(which is a app itself). [e.g. enter "sleep" to shell]  
+1.2.1 you enter a string into shell(which is a app itself). [e.g. enter "sleep 5" to shell]  
+note: the input string is parsed into an array of two entries. first entry is "sleep" and second entry is "5", we see from the pic that only the second entry is used and normally the first entry is ignored coz it's just the name of the cmd.  
 1.2.2 the shell recognize the string, then run for you the corresponding app code (file of .c)[e.g. it runs sleep.c file in /user/sleep.c]   
 1.2.3 the real app is on and do the work. [the app sleep.c pauses the os for some time]
 ## 1.3 working mechanism
