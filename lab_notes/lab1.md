@@ -7,13 +7,13 @@
 
 ## 1.2 app working flow:
 1.2.1 you enter a string into shell(which is a app itself). [e.g. enter "sleep 5" to shell]  
-note: the input string is parsed into an array of two entries. first entry is "sleep" and second entry is "5", we see from the pic that only the second entry is used and normally the first entry is ignored coz it's just the name of the cmd.  
+
 1.2.2 the shell recognize the string, then run for you the corresponding app code (file of .c)[e.g. it runs sleep.c file in /user/sleep.c]   
 1.2.3 the real app is on and do the work. [the app sleep.c pauses the os for some time]
 ## 1.3 working mechanism
 1.3.1 inside the app source file, system call is invoked [e.g. inside sleep.c there is a system call wrapper function "sleep(time)"]    
-![image](https://github.com/youya199/xv6_exercise/assets/94166804/0a3fdc1b-a8fe-4a74-8914-f60c0410cdac)
-
+![image](https://github.com/youya199/xv6_exercise/assets/94166804/0a3fdc1b-a8fe-4a74-8914-f60c0410cdac)  
+note: the input string is parsed into an array of two entries. first entry is "sleep" and second entry is "5", we see from the pic that only the second entry is used and normally the first entry is ignored coz it's just the name of the cmd.  
 1.3.2 the system calls which can be used in app source code are listed in user/user.h, for convenience of app source code developers. [e.g. it declares the system call wrapper int sleep(int); telling developers infos like input parameters]   
 ![image](https://github.com/youya199/xv6_exercise/assets/94166804/7ce74a10-65db-4691-b452-a9d396927927)
 
