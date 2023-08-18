@@ -22,4 +22,14 @@ note: the input string is parsed into an array of two entries. first entry is "s
 First, a mode switch is done by executing a switching assembler code in user/usys.S, in order to switch executing mode from user mode(limited resource access) to kernel mode(all resource access)  
 ![image](https://github.com/youya199/xv6_exercise/assets/94166804/2aab7869-bb88-4416-924f-7575213f6b9f)   
 Second, execute system call in kernel.[the sleep function in this code is different from the system call wrapper which is listed in user/user.h, but rather it is a kernel function, only execute in kernel mode!]  
-![image](https://github.com/youya199/xv6_exercise/assets/94166804/24535fd8-8927-4914-9b6a-2733a5e3c306)
+![image](https://github.com/youya199/xv6_exercise/assets/94166804/24535fd8-8927-4914-9b6a-2733a5e3c306)  
+
+
+# 2. ping pong:
+Refer to textbook page 16.  
+## 2.1 structure of process when creating pipe.  
+```
+1. create pipe: pipe(p);  
+2. fork
+3. case study: how child behaves, how parent behaves
+```
