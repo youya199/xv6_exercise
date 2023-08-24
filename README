@@ -3,6 +3,7 @@ This is my implementation of labs of MIT online course 6.S081: Operating System 
 
 ## SOLUTION
 My solution is inside the folder of "user", named according to the lab instruction correspondingly.
+
 ## NOTES
 In order to help understanding each lab, especially for OS beginners(like meself), notes are available in the folder of lab_notes, explaining in detail the problems and stating my thoughts over it.  
 Contents of Notes
